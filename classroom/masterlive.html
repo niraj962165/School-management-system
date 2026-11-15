@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Master Classroom - Live Dashboard</title>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/livemaster.css">
+</head>
+<body class="live-master-body">
+
+    <div class="master-header">
+        <a href="../portals/faculty_portal.html" class="back-link">← End Session & Return</a>
+        <h2>Mathematics - Chapter 4 (Teacher Console)</h2>
+        <div class="status-badge live-pulse"><span class="dot"></span> BROADCASTING LIVE</div>
+    </div>
+
+    <div class="master-container">
+        <!-- Main Content Area: Video/Whiteboard Simulator -->
+        <div class="main-stage">
+            <div class="video-feed">
+                <p>Teacher Camera Feed Active</p>
+                <div class="overlay-icons">
+                    <button class="stage-btn" onclick="alert('Mic toggled')">🎤</button>
+                    <button class="stage-btn" onclick="alert('Cam toggled')">📷</button>
+                    <button class="stage-btn primary" onclick="alert('Screen sharing commenced')">💻 Share Screen</button>
+                </div>
+            </div>
+            
+            <div class="stage-details">
+                <h3>Session Activity Log</h3>
+                <p>Monitor real-time interactions pushed directly from your students below.</p>
+            </div>
+        </div>
+
+        <!-- Student Interaction Rail (WebSockets) -->
+        <div class="interaction-rail" id="interactionRail">
+            <div class="rail-header">
+                <h3>🔔 Live Student Inputs <span id="eventCount" class="badge">0</span></h3>
+            </div>
+            
+            <div class="rail-events" id="eventList">
+                <div class="empty-state">No interactions yet. Waiting for students...</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Integrate real-time socket mechanism -->
+    <script src="https://cdn.socket.io/4.7.2/socket.io.min.js"></script>
+    <script src="../js/masterlive.js"></script>
+</body>
+</html>
