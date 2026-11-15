@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>School Introduction</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body class="home-body">
+
+    <!-- Background Image -->
+    <div class="background"></div>
+
+    <!-- Overlay (darkens screen on panel open) -->
+    <div class="overlay" id="overlay"></div>
+
+    <!-- Top Left Brand Title -->
+    <div class="brand-title">
+        <h1 class="main-title">ALIES</h1>
+        <h2 class="sub-title">INTERNATIONAL SCHOOL</h2>
+    </div>
+
+    <!-- Top Right 3-Lined Menu Button -->
+    <div class="menu-btn" id="menuBtn">
+        <span></span>
+        <span></span>
+        <span></span>
+    </div>
+
+    <!-- The Top Right Panel -->
+    <div class="panel" id="panel">
+        <ul>
+            <li>
+                <a href="auth/login.html">
+                    <span class="icon">🔑</span>
+                    Login
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <span class="icon">📞</span>
+                    Contact
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <span class="icon">ℹ️</span>
+                    About
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <span class="icon">🏫</span>
+                    Infrastructure
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <span class="icon">💻</span>
+                    Developers
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <span class="icon">👨‍🏫</span>
+                    Faculties
+                </a>
+            </li>
+        </ul>
+    </div>
+
+    <!-- Scroll Down Indicator -->
+    <div class="scroll-indicator">
+        <svg class="down-arrow" xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+            <polyline points="6 9 12 15 18 9"></polyline>
+        </svg>
+        <p>Scroll for more</p>
+    </div>
+
+    <!-- Main Content Section -->
+    <main class="main-content">
+        
+        <!-- Our Vision Section -->
+        <section class="section dark-bg">
+            <div class="container split-layout">
+                <div class="text-content">
+                    <h2 class="section-title">Our Vision</h2>
+                    <p class="section-text">At Alies International School, we believe in nurturing curious minds and compassionate hearts. Our campus is designed to be a hub of innovation, where students are encouraged to explore their potential through a blend of rigorous academics, creative arts, and physical excellence. We don't just teach; we inspire the leaders of tomorrow to think globally and act locally.</p>
+                </div>
+                <div class="img-content">
+                    <img src="assests/school campus.jpg" alt="Main Campus">
+                </div>
+            </div>
+        </section>
+
+        <!-- Academic Excellence -->
+        <section class="section light-bg">
+            <div class="container split-layout reverse">
+                <div class="text-content">
+                    <h2 class="section-title">Academic Excellence</h2>
+                    <p class="section-text">We offer a dynamic curriculum that integrates traditional values with modern technology. From our state-of-the-art library to our advanced IT labs, every corner of Alies International is built to foster a love for learning. Our dedicated faculty ensures that every student receives the personalized attention they need to thrive in an ever-changing world.</p>
+                    <div class="features-grid">
+                        <div class="feature-item">
+                            <span class="icon">📚</span>
+                            <div class="feature-text">
+                                <h4>State-of-the-Art Library</h4>
+                            </div>
+                        </div>
+                        <div class="feature-item">
+                            <span class="icon">💻</span>
+                            <div class="feature-text">
+                                <h4>Advanced IT Labs</h4>
+                            </div>
+                        </div>
+                        <div class="feature-item">
+                            <span class="icon">🌐</span>
+                            <div class="feature-text">
+                                <h4>Global Thinking</h4>
+                            </div>
+                        </div>
+                        <div class="feature-item">
+                            <span class="icon">👨‍🏫</span>
+                            <div class="feature-text">
+                                <h4>Dedicated Faculty</h4>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="img-content">
+                    <img src="assests/library.jpg" alt="Library">
+                </div>
+            </div>
+        </section>
+
+    <!-- All-in-One Academic Hub / About Section -->
+        <section class="section dark-bg">
+            <div class="container split-layout">
+                <div class="img-content">
+                    <img src="assests/HOLDING HANDS.png" alt="Empowering Learners">
+                </div>
+                <div class="text-content">
+                    <h2 class="section-title">All-in-One Academic Hub</h2>
+                    <p class="section-text">Our platform serves as a centralized digital space where students and educators connect seamlessly. By integrating student information, teacher schedules, and performance tracking into a single user-friendly interface, we eliminate the need for scattered physical records and multiple third-party apps. Experience a faster, error-free environment designed to enhance the daily workflow of our entire school community.</p>
+                    <a href="auth/login.html" class="btn-primary mt-10">Login Here</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Key Features Section -->
+        <section class="section light-bg">
+            <div class="container">
+                <div class="text-center-mb-60">
+                    <h2 class="section-title text-primary-color">Key Features for a Smarter Campus</h2>
+                </div>
+                <div class="features-bento-grid">
+                    <div class="bento-card feature-bento-card card-theme-primary">
+                        <div class="icon-box feature-bento-icon">⏱️</div>
+                        <h4 class="feature-bento-title">Real-Time Progress Tracking</h4>
+                        <p class="feature-bento-text">Students and parents can access live updates on attendance percentages and academic grades, ensuring complete transparency.</p>
+                    </div>
+                    <div class="bento-card feature-bento-card card-theme-dark">
+                        <div class="icon-box feature-bento-icon">☁️</div>
+                        <h4 class="feature-bento-title">Digital Resource Center</h4>
+                        <p class="feature-bento-text">Teachers can instantly upload study notes and lecture materials in PDF or Doc formats for students to download anytime.</p>
+                    </div>
+                    <div class="bento-card feature-bento-card card-theme-light">
+                        <div class="icon-box feature-bento-icon">📥</div>
+                        <h4 class="feature-bento-title">Integrated Assignment Portal</h4>
+                        <p class="feature-bento-text">A dedicated space for students to submit projects and assignments directly through the website, allowing for timely feedback.</p>
+                    </div>
+                    <div class="bento-card feature-bento-card card-theme-slate">
+                        <div class="icon-box feature-bento-icon">🔔</div>
+                        <h4 class="feature-bento-title">Instant Communication</h4>
+                        <p class="feature-bento-text">Stay informed with global announcements, holiday alerts, and important event circulars delivered directly to your personal dashboard.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Modern Learning Environment -->
+        <section class="section dark-bg">
+            <div class="container split-layout">
+                <div class="text-content">
+                    <h2 class="section-title">A Modern Learning Environment</h2>
+                    <p class="section-text">Education at Alies International goes beyond the classroom. Our modern campus features world-class infrastructure, including expansive green spaces and specialized studios for music and design. We provide a safe, vibrant, and inclusive community where students from all backgrounds can come together to innovate, collaborate, and grow.</p>
+                    <a href="#" class="btn-primary mt-20">Join Our Journey</a>
+                </div>
+                <div class="image-gallery">
+                    <img src="assests/school campus 2.jpg" class="grid-img img-1" alt="Main Campus 2">
+                    <img src="assests/classroom.jpg" class="grid-img img-2" alt="Classroom">
+                    <img src="assests/our idea.jpg" class="grid-img img-3" alt="Our Ideas">
+                </div>
+            </div>
+        </section>
+        
+        <!-- Innovative & Accessible Design -->
+        <section class="section dark-bg">
+            <div class="container container-narrow-centered">
+                <h2 class="section-title">Innovative & Accessible Design</h2>
+                <p class="section-text text-large-bright">Built with modern technology like Node.js and Tailwind CSS, our system is fully responsive and platform-independent. Whether you are using a desktop at school or a smartphone at home, you can securely access your personalized dashboard with just a username and password. We are committed to using the latest tools to provide a world-class educational experience.</p>
+            </div>
+        </section>
+        
+    </main>
+
+    <script src="js/script.js?v=4"></script>
+</body>
+
+</html>
