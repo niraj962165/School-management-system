@@ -1,0 +1,125 @@
+.dashboard-mode {
+    background-color: #050505;
+    background-image: 
+        radial-gradient(at 0% 0%, rgba(79, 70, 229, 0.15) 0px, transparent 50%),
+        radial-gradient(at 100% 100%, rgba(244, 63, 94, 0.15) 0px, transparent 50%);
+    color: white;
+    min-height: 100vh;
+    padding: 3rem 5%;
+}
+
+.dashboard-container {
+    max-width: 1300px;
+    margin: 0 auto;
+    position: relative;
+    z-index: 10;
+}
+
+.dashboard-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 3rem;
+    padding-bottom: 2rem;
+    border-bottom: 1px solid rgba(255,255,255,0.1);
+}
+
+.dashboard-header h1 {
+    font-size: 2.5rem;
+    color: #fff;
+}
+
+.dashboard-header p.text-muted {
+    color: #94a3b8;
+    margin-top: 0.5rem;
+    font-size: 1.1rem;
+}
+
+.flex-col {
+    display: flex;
+    flex-direction: column;
+}
+
+.mt-10 { margin-top: 10px; }
+.mt-20 { margin-top: 20px; }
+.mb-10 { margin-bottom: 10px; }
+.w-full { width: 100%; display: block; text-align: center; }
+.text-white { color: #fff; }
+
+.action-form, .grade-form {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.form-input {
+    width: 100%;
+    padding: 12px 16px;
+    background: rgba(255,255,255,0.05);
+    border: 1px solid rgba(255,255,255,0.2);
+    border-radius: 8px;
+    color: white;
+    font-family: inherit;
+    font-size: 0.95rem;
+    transition: all 0.2s;
+}
+
+.form-input::placeholder {
+    color: rgba(255,255,255,0.5);
+}
+
+.form-input:focus {
+    outline: none;
+    border-color: var(--primary);
+    background: rgba(255,255,255,0.1);
+}
+
+.form-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+}
+
+.card-dark {
+    background: rgba(15, 23, 42, 0.8);
+    backdrop-filter: blur(12px);
+    border: 1px solid rgba(255,255,255,0.1);
+}
+
+.card-primary {
+    background: var(--primary);
+    color: white;
+}
+
+.card-light {
+    background: rgba(255,255,255,0.05);
+    backdrop-filter: blur(12px);
+    border: 1px solid rgba(255,255,255,0.1);
+}
+
+.card-slate {
+    background: rgba(30, 41, 59, 0.7);
+    backdrop-filter: blur(12px);
+    border: 1px solid rgba(255,255,255,0.1);
+}
+
+.card-dark p, .card-primary p, .card-light p, .card-slate p {
+    font-size: 1rem;
+    color: rgba(255, 255, 255, 0.7);
+    margin-bottom: 20px;
+}
+
+.code-display {
+    margin-top: 15px;
+    padding: 15px;
+    background: rgba(0,0,0,0.3);
+    border-radius: 8px;
+    font-size: 1.5rem;
+    letter-spacing: 5px;
+    font-weight: bold;
+    text-align: center;
+    color: #4ade80;
+    border: 1px dashed rgba(74, 222, 128, 0.5);
+}
+
+.hidden { display: none; }
