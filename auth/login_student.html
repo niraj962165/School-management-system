@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Login - Alies International</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/app1.css">
+</head>
+<body class="auth-body">
+
+    <div class="login-circles"></div>
+    <div class="login-circles-right"></div>
+
+    <div class="login-card">
+        <h1>Student Login 👩‍🎓</h1>
+        <p>Please enter your credentials to continue</p>
+        
+        <form id="studentLoginForm" class="auth-form">
+            <div class="form-group">
+                <label for="loginId">Login ID</label>
+                <input type="text" id="loginId" required placeholder="Enter your ID (e.g., S601)">
+            </div>
+            <div class="form-group">
+                <label for="password">Password</label>
+                <input type="password" id="password" required placeholder="Enter your password">
+            </div>
+            <button type="submit" class="auth-submit-btn">Login</button>
+        </form>
+
+        <a href="../auth/login.html" class="back-link">
+            <span>←</span> Back to Login Options
+        </a>
+    </div>
+
+    <a href="#" class="help-btn" onclick="alert('Support form opened')">
+        <span>❓</span> Need Help?
+    </a>
+
+    <script>
+        document.getElementById('studentLoginForm').addEventListener('submit', async (e) => {
+            e.preventDefault();
+            
+            const loginId = document.getElementById('loginId').value;
+            const password = document.getElementById('password').value;
+            const btn = document.querySelector('.auth-submit-btn');
+            const originalText = btn.innerText;
+            
+            // UI feedback processing
+            btn.innerText = 'Verifying with Database...';
+            btn.disabled = true;
+
+            try {
+                const response = await fetch('/api/login/student', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({ loginId, password })
+                });
+                
+                const data = await response.json();
+                
+                if(data.success) {
+                    // Save to local storage instantly before route hop
+                    localStorage.setItem('currentStudent', JSON.stringify(data.student));
+                    
+                    // Success flash and navigate!
+                    btn.style.backgroundColor = '#10b981';
+                    btn.innerText = 'Access Granted!';
+                    setTimeout(() => {
+                        window.location.href = '../portals/student_portal.html';
+                    }, 800);
+                } else {
+                    // Fail prompt
+                    alert('Login Failed: ' + data.message);
+                    btn.innerText = originalText;
+                    btn.disabled = false;
+                }
+            } catch(err) {
+                console.error("Authentication Error: ", err);
+                alert("Could not connect to the Backend server. Ensure node server.js is actively running!");
+                btn.innerText = originalText;
+                btn.disabled = false;
+            }
+        });
+    </script>
+</body>
+</html>
